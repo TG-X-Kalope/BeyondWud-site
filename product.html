@@ -653,48 +653,26 @@
 
           <!-- Navigation Buttons - Desktop Only -->
           <div
-            class="hidden md:flex absolute top-1/2 -translate-y-1/2 -left-12"
+            class="hidden md:flex absolute top-1/2 -translate-y-1/2 -left-12 z-10"
           >
             <button
               id="products-prev"
-              class="bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-all duration-300 hover:shadow-xl transform hover:scale-110"
+              class="bg-brown-dark text-white rounded-full p-4 shadow-lg hover:bg-brown-medium  transition-all duration-300 font-semibold text-lg flex items-center gap-2"
             >
-              <svg
-                class="w-6 h-6 text-gray-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 19l-7-7 7-7"
-                ></path>
-              </svg>
+              <i class="fas fa-chevron-left"></i>
+              Prev
             </button>
           </div>
 
           <div
-            class="hidden md:flex absolute top-1/2 -translate-y-1/2 -right-12"
+            class="hidden md:flex absolute top-1/2 -translate-y-1/2 -right-12 z-10"
           >
             <button
               id="products-next"
-              class="bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-all duration-300 hover:shadow-xl transform hover:scale-110"
+              class="bg-brown-dark text-white rounded-full p-4 shadow-lg hover:bg-brown-medium  transition-all duration-300 font-semibold text-lg flex items-center gap-2"
             >
-              <svg
-                class="w-6 h-6 text-gray-600"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                ></path>
-              </svg>
+              Next
+              <i class="fas fa-chevron-right"></i>
             </button>
           </div>
         </div>

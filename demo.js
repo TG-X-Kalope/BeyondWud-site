@@ -117,4 +117,4 @@ document.querySelectorAll(".product-card").forEach((card, index) => {
   observer.observe(card);
 });
 
-//  nextTestimonial
+
