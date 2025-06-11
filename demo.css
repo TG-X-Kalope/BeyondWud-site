@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 .slide {
   display: none;
   animation: fadeIn 0.8s ease-in-out;
