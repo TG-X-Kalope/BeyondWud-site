@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="demo.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <script>
       tailwind.config = {
@@ -355,7 +355,7 @@
       </div>
     </section>
     <!-- Products & Services Section -->
-    <section class="py-20 bg-white">
+    <section class="py-10 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Section Header -->
         <div class="text-center mb-16">
@@ -857,7 +857,7 @@
         <!-- View All Blog Posts Button -->
         <div class="text-center">
           <button
-            class="view-all-btn px-6 py-3 rounded-full font-semibold text-lg border-2 border-amber-800 text-amber-800 hover:bg-amber-800 hover:text-white transition-all"
+            class="view-all-btn px-4 py-3 rounded-full font-semibold text-lg border-2 border-amber-800 text-amber-800 hover:bg-amber-800 hover:text-white transition-all"
           >
             View All Posts
           </button>
@@ -865,133 +865,205 @@
       </div>
     </section>
 
-   <section class="bg-white py-10 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-6xl mx-auto text-center">
-    <h2 class="text-4xl font-bold text-brown-dark mb-12">Testimonials</h2>
+    <!-- Testimonials Section -->
+   <section class="bg-gray-50 py-6 sm:py-10 lg:py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brown-dark mb-8 sm:mb-12">Testimonials</h2>
 
-    <div class="relative">
-      <!-- Left Arrow -->
-      <button
-        onclick="prevTestimonial()"
-        class="absolute -left-5 top-1/2 transform -translate-y-1/2 bg-brown-dark text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center z-10 hover:bg-brown-700 transition"
-      >
-        <i class="fas fa-chevron-left"></i>
-      </button>
+            <div class="relative">
+                <!-- Desktop Arrows Only -->
+                <button
+                    onclick="prevTestimonial()"
+                    class="hidden lg:flex absolute -left-6 top-1/2 transform -translate-y-1/2 bg-brown-dark text-white w-12 h-12 rounded-full shadow-lg items-center justify-center z-10 hover:bg-brown-700 transition-colors duration-200"
+                >
+                    <i class="fas fa-chevron-left"></i>
+                </button>
 
-      <!-- Slides -->
-      <div class="overflow-hidden rounded-3xl shadow-xl bg-gray-50">
-        <div
-          id="testimonialSlider"
-          class="flex transition-transform duration-700 ease-in-out"
-        >
-          <!-- Slide Template -->
-          <div class="min-w-full p-6 sm:p-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-10">
-            <img
-              src="https://randomuser.me/api/portraits/men/32.jpg"
-              class="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover shadow-md"
-              alt="John"
-            />
-            <div class="text-center sm:text-left">
-              <h3 class="text-xl font-semibold text-brown-dark">John Smith</h3>
-              <p class="text-sm text-brown-medium mb-2">CEO, Tech Solutions</p>
-              <p class="text-gray-700 italic">
-                “Working with this team has been an incredible experience.”
-              </p>
+                <!-- Beautiful Card Container -->
+                <div class="overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-br from-white to-gray-50 border border-gray-100">
+                    <div
+                        id="testimonialSlider"
+                        class="flex transition-transform duration-700 ease-in-out"
+                    >
+                        <!-- Slide 1 -->
+                        <div class="min-w-full p-6 sm:p-8 lg:p-12 flex flex-col items-center text-center space-y-4">
+                            <!-- Quote Icon -->
+                            <div class="w-12 h-12 bg-brown-dark rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-quote-left text-white text-lg"></i>
+                            </div>
+                            
+                            <!-- Profile Image with Gradient Border -->
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-gradient-to-r from-brown-dark to-brown-medium rounded-full p-1">
+                                    <div class="w-full h-full bg-white rounded-full"></div>
+                                </div>
+                                <img
+                                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                                    class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover shadow-lg"
+                                    alt="John Smith"
+                                />
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="max-w-lg space-y-4">
+                                <p class="text-base sm:text-lg text-gray-700 italic leading-relaxed font-medium">
+                                    "Working with this team has been an incredible experience. Their attention to detail and commitment to excellence is unmatched."
+                                </p>
+                                <div class="pt-4 border-t border-gray-200">
+                                    <h3 class="text-xl sm:text-2xl font-bold text-brown-dark">
+                                        John Smith
+                                    </h3>
+                                    <p class="text-sm sm:text-base text-brown-medium font-medium">
+                                        CEO, Tech Solutions
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="min-w-full p-6 sm:p-8 lg:p-12 flex flex-col items-center text-center space-y-4">
+                            <!-- Quote Icon -->
+                            <div class="w-12 h-12 bg-brown-dark rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-quote-left text-white text-lg"></i>
+                            </div>
+                            
+                            <!-- Profile Image with Gradient Border -->
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-gradient-to-r from-brown-dark to-brown-medium rounded-full p-1">
+                                    <div class="w-full h-full bg-white rounded-full"></div>
+                                </div>
+                                <img
+                                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                                    class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover shadow-lg"
+                                    alt="Sara Lee"
+                                />
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="max-w-lg space-y-4">
+                                <p class="text-base sm:text-lg text-gray-700 italic leading-relaxed font-medium">
+                                    "Very professional and always on time. Loved the service! The quality exceeded our expectations completely."
+                                </p>
+                                <div class="pt-4 border-t border-gray-200">
+                                    <h3 class="text-xl sm:text-2xl font-bold text-brown-dark">
+                                        Sara Lee
+                                    </h3>
+                                    <p class="text-sm sm:text-base text-brown-medium font-medium">
+                                        Marketing Head, BuildPro
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="min-w-full p-6 sm:p-8 lg:p-12 flex flex-col items-center text-center space-y-4">
+                            <!-- Quote Icon -->
+                            <div class="w-12 h-12 bg-brown-dark rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-quote-left text-white text-lg"></i>
+                            </div>
+                            
+                            <!-- Profile Image with Gradient Border -->
+                            <div class="relative">
+                                <div class="absolute inset-0 bg-gradient-to-r from-brown-dark to-brown-medium rounded-full p-1">
+                                    <div class="w-full h-full bg-white rounded-full"></div>
+                                </div>
+                                <img
+                                    src="https://randomuser.me/api/portraits/men/65.jpg"
+                                    class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover shadow-lg"
+                                    alt="David Kim"
+                                />
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="max-w-lg space-y-4">
+                                <p class="text-base sm:text-lg text-gray-700 italic leading-relaxed font-medium">
+                                    "Great product quality and excellent support! They transformed our vision into reality with remarkable precision."
+                                </p>
+                                <div class="pt-4 border-t border-gray-200">
+                                    <h3 class="text-xl sm:text-2xl font-bold text-brown-dark">
+                                        David Kim
+                                    </h3>
+                                    <p class="text-sm sm:text-base text-brown-medium font-medium">
+                                        Interior Architect, DShape
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Right Arrow Only -->
+                <button
+                    onclick="nextTestimonial()"
+                    class="hidden lg:flex absolute -right-6 top-1/2 transform -translate-y-1/2 bg-brown-dark text-white w-12 h-12 rounded-full shadow-lg items-center justify-center z-10 hover:bg-brown-700 transition-colors duration-200"
+                >
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-          </div>
 
-          <div class="min-w-full p-6 sm:p-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-10">
-            <img
-              src="https://randomuser.me/api/portraits/women/44.jpg"
-              class="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover shadow-md"
-              alt="Sara"
-            />
-            <div class="text-center sm:text-left">
-              <h3 class="text-xl font-semibold text-brown-dark">Sara Lee</h3>
-              <p class="text-sm text-brown-medium mb-2">Marketing Head, BuildPro</p>
-              <p class="text-gray-700 italic">
-                “Very professional and always on time. Loved the service!”
-              </p>
+            <!-- Indicators -->
+            <div class="flex justify-center space-x-2 sm:space-x-3 mt-4 sm:mt-6">
+                <span
+                    class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-brown-dark cursor-pointer transition-colors duration-200"
+                    onclick="goToSlide(0)"
+                ></span>
+                <span
+                    class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gray-300 cursor-pointer transition-colors duration-200 hover:bg-gray-400"
+                    onclick="goToSlide(1)"
+                ></span>
+                <span
+                    class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gray-300 cursor-pointer transition-colors duration-200 hover:bg-gray-400"
+                    onclick="goToSlide(2)"
+                ></span>
             </div>
-          </div>
 
-          <div class="min-w-full p-6 sm:p-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-10">
-            <img
-              src="https://randomuser.me/api/portraits/men/65.jpg"
-              class="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover shadow-md"
-              alt="David"
-            />
-            <div class="text-center sm:text-left">
-              <h3 class="text-xl font-semibold text-brown-dark">David Kim</h3>
-              <p class="text-sm text-brown-medium mb-2">Interior Architect, DShape</p>
-              <p class="text-gray-700 italic">
-                “Great product quality and excellent support!”
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
+    </section>
+    <!-- Font Awesome & Script -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const slider = document.getElementById("testimonialSlider");
+      const indicators = document.querySelectorAll(".indicator");
+      const total = slider.children.length;
+      let current = 0,
+        interval;
 
-      <!-- Right Arrow -->
-      <button
-        onclick="nextTestimonial()"
-        class="absolute -right-5 top-1/2 transform -translate-y-1/2 bg-brown-dark text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center z-10 hover:bg-brown-700 transition"
-      >
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </div>
+      function update() {
+        slider.style.transform = `translateX(-${current * 100}%)`;
+        indicators.forEach((dot, i) => {
+          dot.style.backgroundColor = i === current ? "#8B4513" : "#D1D5DB";
+        });
+      }
 
-    <!-- Indicators -->
-    <div class="flex justify-center space-x-3 mt-6">
-      <span class="indicator w-3 h-3 rounded-full bg-gray-300 cursor-pointer" onclick="goToSlide(0)"></span>
-      <span class="indicator w-3 h-3 rounded-full bg-gray-300 cursor-pointer" onclick="goToSlide(1)"></span>
-      <span class="indicator w-3 h-3 rounded-full bg-gray-300 cursor-pointer" onclick="goToSlide(2)"></span>
-    </div>
-  </div>
-</section>
+      function nextTestimonial() {
+        current = (current + 1) % total;
+        update();
+        resetInterval();
+      }
 
-<!-- Font Awesome & Script -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<script>
-  const slider = document.getElementById("testimonialSlider");
-  const indicators = document.querySelectorAll(".indicator");
-  const total = slider.children.length;
-  let current = 0,
-    interval;
+      function prevTestimonial() {
+        current = (current - 1 + total) % total;
+        update();
+        resetInterval();
+      }
 
-  function update() {
-    slider.style.transform = `translateX(-${current * 100}%)`;
-    indicators.forEach((dot, i) => {
-      dot.style.backgroundColor = i === current ? "#8B4513" : "#D1D5DB";
-    });
-  }
+      function goToSlide(index) {
+        current = index;
+        update();
+        resetInterval();
+      }
 
-  function nextTestimonial() {
-    current = (current + 1) % total;
-    update();
-    resetInterval();
-  }
+      function resetInterval() {
+        clearInterval(interval);
+        interval = setInterval(nextTestimonial, 5000);
+      }
 
-  function prevTestimonial() {
-    current = (current - 1 + total) % total;
-    update();
-    resetInterval();
-  }
-
-  function goToSlide(index) {
-    current = index;
-    update();
-    resetInterval();
-  }
-
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(nextTestimonial, 5000);
-  }
-
-  update();
-  interval = setInterval(nextTestimonial, 5000);
-</script>
+      update();
+      interval = setInterval(nextTestimonial, 5000);
+    </script>
 
     <!-- Contact Section -->
     <div class="container mx-auto px-4 py-16">
@@ -1091,94 +1163,142 @@
     <footer
       class="bg-gradient-to-b from-white to-gray-100 text-gray-800 py-14 px-6"
     >
-      <div
-        class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 text-center md:text-left"
-      >
-        <!-- Logo + Name -->
-        <div class="flex flex-col items-center md:items-start">
-          <div class="w-16 h-16 bg-gray-300 rounded-full overflow-hidden mb-4">
-            <img
-              src="Favicon 2.png"
-              alt="Logo"
-              class="w-full h-full object-cover"
-            />
+      <div class="max-w-7xl mx-auto">
+        <!-- Mobile: Single column, Desktop: 5 columns -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10"
+        >
+          <!-- Logo + Name -->
+          <div class="flex flex-col items-center md:items-start">
+            <div
+              class="w-16 h-16 bg-gray-300 rounded-full overflow-hidden mb-4 flex items-center justify-center"
+            >
+              <span class="text-2xl font-bold text-gray-600">BW</span>
+            </div>
+            <span class="text-xl font-semibold tracking-wide">BeyondWud</span>
           </div>
-          <span class="text-xl font-semibold tracking-wide">BeyondWud</span>
-        </div>
 
-        <!-- Resources -->
-        <div>
-          <h3 class="font-bold text-lg mb-3 text-brown-dark">RESOURCES</h3>
-          <ul class="space-y-2 text-sm">
-            <li>
-              <a href="#" class="hover:text-green-600 transition">Home</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-green-600 transition">About</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-green-600 transition">Products</a>
-            </li>
-          </ul>
-        </div>
+          <!-- Resources -->
+          <div class="text-center md:text-left">
+            <h3 class="font-bold text-lg mb-4 text-brown-dark">RESOURCES</h3>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-600 transition-colors duration-200"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-600 transition-colors duration-200"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-600 transition-colors duration-200"
+                  >Products</a
+                >
+              </li>
+            </ul>
+          </div>
 
-        <!-- Company -->
-        <div>
-          <h3 class="font-bold text-lg mb-3 text-brown-dark">COMPANY</h3>
-          <ul class="space-y-2 text-sm">
-            <li>
-              <a href="#" class="hover:text-brown-dark transition">Career</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-brown-dark transition">Contact</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-brown-dark transition">Service</a>
-            </li>
-          </ul>
-        </div>
+          <!-- Company -->
+          <div class="text-center md:text-left">
+            <h3 class="font-bold text-lg mb-4 text-brown-dark">COMPANY</h3>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brown-dark transition-colors duration-200"
+                  >Career</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brown-dark transition-colors duration-200"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brown-dark transition-colors duration-200"
+                  >Service</a
+                >
+              </li>
+            </ul>
+          </div>
 
-        <!-- Legal -->
-        <div>
-          <h3 class="font-bold text-lg mb-3 text-brown-dark">LEGAL</h3>
-          <ul class="space-y-2 text-sm">
-            <li>
-              <a href="#" class="hover:text-brown-dark transition"
-                >Privacy Policy</a
+          <!-- Legal -->
+          <div class="text-center md:text-left">
+            <h3 class="font-bold text-lg mb-4 text-brown-dark">LEGAL</h3>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brown-dark transition-colors duration-200"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brown-dark transition-colors duration-200"
+                  >Terms of Use</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Address + Social -->
+          <div class="text-center md:text-left">
+            <h3 class="font-bold text-lg mb-4 text-brown-dark">ADDRESS</h3>
+            <div class="mb-4">
+              <p class="text-sm leading-6 text-gray-600">
+                123, Elegant Street<br />
+                New Industrial Area, Delhi<br />
+                PIN: 110001
+              </p>
+            </div>
+            <div class="flex justify-center md:justify-start space-x-4 text-lg">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-blue-600 transition-colors duration-200"
               >
-            </li>
-            <li>
-              <a href="#" class="hover:text-brown-dark transition"
-                >Terms of Use</a
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-sky-400 transition-colors duration-200"
               >
-            </li>
-          </ul>
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-pink-500 transition-colors duration-200"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-blue-800 transition-colors duration-200"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <!-- Address + Social -->
-        <div class="flex flex-col items-center md:items-start">
-          <h3 class="font-bold text-lg mb-3 text-brown-dark">ADDRESS</h3>
-          <p class="text-sm leading-6 text-gray-600 text-center md:text-left">
-            123, Elegant Street<br />
-            New Industrial Area, Delhi<br />
-            PIN: 110001
+        <!-- Copyright Section -->
+        <div class="mt-12 pt-8 border-t border-gray-200 text-center">
+          <p class="text-sm text-gray-500">
+            © 2025 BeyondWud. All rights reserved.
           </p>
-          <div
-            class="flex justify-center md:justify-start mt-4 space-x-4 text-lg"
-          >
-            <a href="#" class="text-gray-600 hover:text-blue-600 transition"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="#" class="text-gray-600 hover:text-sky-400 transition"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a href="#" class="text-gray-600 hover:text-pink-500 transition"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="#" class="text-gray-600 hover:text-blue-800 transition"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-          </div>
         </div>
       </div>
     </footer>
