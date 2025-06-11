@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoBoard - A Better Alternative to Plywood</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="demo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brown-dark": "#8B4513",
+              "brown-light": "#D2B48C",
+              "brown-medium": "#A0522D",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 navbar-blur shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img
+                src="Favicon 2.png"
+                alt="EcoBoard Logo"
+                class="h-10 sm:h-12 lg:h-14 w-auto"
+              />
+            </div>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:block">
+            <div
+              class="ml-4 lg:ml-12 flex items-baseline space-x-4 lg:space-x-8"
+            >
+              <a
+                href="#"
+                class="nav-item text-gray-800 hover:text-gray-600 px-2 lg:px-3 py-2 text-sm font-medium"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="nav-item text-gray-800 hover:text-gray-600 px-2 lg:px-3 py-2 text-sm font-medium"
+                >About</a
+              >
+              <a
+                href="#"
+                class="nav-item text-gray-800 hover:text-gray-600 px-2 lg:px-3 py-2 text-sm font-medium"
+                >Product</a
+              >
+              <a
+                href="#"
+                class="nav-item text-gray-800 hover:text-gray-600 px-2 lg:px-3 py-2 text-sm font-medium"
+                >Services</a
+              >
+              <a
+                href="#"
+                class="nav-item text-gray-800 hover:text-gray-600 px-2 lg:px-3 py-2 text-sm font-medium"
+                >Clients</a
+              >
+              <a
+                href="#"
+                class="nav-item text-gray-800 hover:text-gray-600 px-2 lg:px-3 py-2 text-sm font-medium"
+                >Blogs</a
+              >
+              <a
+                href="#"
+                class="nav-item text-gray-800 hover:text-gray-600 px-2 lg:px-3 py-2 text-sm font-medium"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-btn"
+              class="text-gray-800 hover:text-gray-600 p-2"
+            >
+              <div class="h-6 w-6">
+                <div class="w-full h-0.5 bg-current mb-1.5"></div>
+                <div class="w-full h-0.5 bg-current mb-1.5"></div>
+                <div class="w-full h-0.5 bg-current"></div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="#"
+            class="block px-3 py-2 text-gray-800 hover:text-gray-600 hover:bg-gray-50 rounded-md text-base"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 text-gray-800 hover:text-gray-600 hover:bg-gray-50 rounded-md text-base"
+            >About</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 text-gray-800 hover:text-gray-600 hover:bg-gray-50 rounded-md text-base"
+            >Product</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 text-gray-800 hover:text-gray-600 hover:bg-gray-50 rounded-md text-base"
+            >Services</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 text-gray-800 hover:text-gray-600 hover:bg-gray-50 rounded-md text-base"
+            >Clients</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 text-gray-800 hover:text-gray-600 hover:bg-gray-50 rounded-md text-base"
+            >Blogs</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 text-gray-800 hover:text-gray-600 hover:bg-gray-50 rounded-md text-base"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section - Reduced Height -->
+    <section
+      class="relative h-screen max-h-[600px] sm:max-h-[700px] lg:max-h-[800px] flex items-center justify-center overflow-hidden"
+    >
+      <!-- Background Slides -->
+      <div class="absolute inset-0">
+        <!-- Slide 1 - Eco-Friendly Materials -->
+        <div
+          class="slide active absolute inset-0 slide-bg"
+          style="
+            background-image: url('https://static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/spaces/kitchens/a-guide-to-understanding-pvc-kitchen-cabinets-in-modern-modular-kitchens/pvc-laminate-for-kitchen-cabinet.jpg');
+          "
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-black/70 to-gray-800/50"
+          ></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center text-white max-w-6xl px-4 sm:px-6 lg:px-8">
+              <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight"
+              >
+                About <span class="text-white">BeyondWud</span>
+              </h1>
+              <p
+                class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-gray-200 max-w-3xl mx-auto"
+              >
+                Perfect for furniture & modular kitchens and a better
+                alternative to plywood.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
+        >
+          <!-- Left Column - Text Content -->
+          <div class="space-y-6 lg:space-y-8">
+            <div>
+              <h2
+                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-6 leading-tight"
+              >
+                Welcome to our <span class="text-brown-dark">BeyondWud</span>
+              </h2>
+
+              <div
+                class="space-y-4 lg:space-y-6 text-gray-600 text-base lg:text-lg leading-relaxed"
+              >
+                <p>
+                  With their unwavering efforts and highly imaginative designs,
+                  we have set a new standard for uPVC Sheets & Boards. At a time
+                  when the majority of consumers prefer uPVC, EcoBoard stands
+                  out among competitors by offering items that are uniquely
+                  created and tailored to their needs.
+                </p>
+
+                <p>
+                  We have produced products such as Modular Kitchens, uPVC
+                  Doors, Wardrobes, Interior Panels, Partition, Ceiling And Wall
+                  Paneling, and Office Furnitures for our consumers with the
+                  four various brands that we offer. Our customers may make
+                  their homes look clean and clutter-free by using these various
+                  uPVC Sheets & Boards products.
+                </p>
+
+                <p class="hidden sm:block">
+                  Our commitment to our job, together with our ambition to
+                  deliver high-quality items, has always resulted in us
+                  delivering finished goods well ahead of schedule. We are known
+                  for meeting deadlines while maintaining high quality. We don't
+                  sell things; instead, we provide solutions to our clients.
+                  Customers keep coming back to us because we are known for
+                  instilling contemporary trends and adapting them in our uPVC
+                  Sheets & Boards designs. Our highly skilled workforce, which
+                  consists of a mix of highly skilled and efficient
+                  professionals, provides a solid foundation for our company's
+                  success.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column - Timeline with Brands and Product Images -->
+          <div class="relative mt-8 lg:mt-0">
+            <!-- Product Showcase Images -->
+            <div class="grid grid-cols-2 gap-3 lg:gap-4 mb-6 lg:mb-8">
+              <div class="relative overflow-hidden rounded-lg shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=200&fit=crop"
+                  alt="Modern Kitchen with uPVC Boards"
+                  class="w-full h-24 sm:h-28 lg:h-32 object-cover"
+                />
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2 lg:p-3"
+                >
+                  <p class="text-white text-xs lg:text-sm font-medium">
+                    Modular Kitchens
+                  </p>
+                </div>
+              </div>
+              <div class="relative overflow-hidden rounded-lg shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=300&h=200&fit=crop"
+                  alt="uPVC Interior Panels"
+                  class="w-full h-24 sm:h-28 lg:h-32 object-cover"
+                />
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2 lg:p-3"
+                >
+                  <p class="text-white text-xs lg:text-sm font-medium">
+                    Interior Panels
+                  </p>
+                </div>
+              </div>
+              <div class="relative overflow-hidden rounded-lg shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1586105251261-72a756497a11?w=300&h=200&fit=crop"
+                  alt="uPVC Wardrobes"
+                  class="w-full h-24 sm:h-28 lg:h-32 object-cover"
+                />
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2 lg:p-3"
+                >
+                  <p class="text-white text-xs lg:text-sm font-medium">
+                    Wardrobes
+                  </p>
+                </div>
+              </div>
+              <div class="relative overflow-hidden rounded-lg shadow-lg">
+                <img
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=300&h=200&fit=crop"
+                  alt="Office Furniture"
+                  class="w-full h-24 sm:h-28 lg:h-32 object-cover"
+                />
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2 lg:p-3"
+                >
+                  <p class="text-white text-xs lg:text-sm font-medium">
+                    Office Furniture
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision and Business Idea Section -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
+        >
+          <!-- Left Column - Vision Icons with Background Image -->
+          <div class="relative order-2 lg:order-1">
+            <!-- Background Image -->
+            <div class="absolute inset-0 rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop"
+                alt="Modern Office Space"
+                class="w-full h-full object-cover opacity-20"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"
+              ></div>
+            </div>
+
+            <!-- Vision Icons -->
+            <div
+              class="relative z-10 flex justify-center items-center min-h-60 sm:min-h-72 lg:min-h-80 py-8"
+            >
+              <div class="flex space-x-4 sm:space-x-6">
+                <div
+                  class="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-white rounded-full flex items-center justify-center border-4 border-purple-800 shadow-lg"
+                >
+                  <div class="text-center">
+                    <i
+                      class="fas fa-lightbulb text-lg sm:text-xl lg:text-2xl text-purple-800 mb-1"
+                    ></i>
+                    <div class="text-xs font-semibold text-purple-800">
+                      VISION
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-white rounded-full flex items-center justify-center border-4 border-orange-600 shadow-lg"
+                >
+                  <div class="text-center">
+                    <i
+                      class="fas fa-target text-lg sm:text-xl lg:text-2xl text-orange-600 mb-1"
+                    ></i>
+                    <div class="text-xs font-semibold text-orange-600">
+                      MISSION
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-white rounded-full flex items-center justify-center border-4 border-teal-600 shadow-lg"
+                >
+                  <div class="text-center">
+                    <i
+                      class="fas fa-check text-lg sm:text-xl lg:text-2xl text-teal-600 mb-1"
+                    ></i>
+                    <div class="text-xs font-semibold text-teal-600">
+                      VALUES
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column - Content -->
+          <div class="order-1 lg:order-2">
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 lg:mb-8 leading-tight"
+            >
+              Our <span class="text-brown-dark">vision</span> and
+              <span class="text-brown-dark">business</span> idea
+            </h2>
+
+            <div
+              class="space-y-4 lg:space-y-6 text-gray-600 text-base lg:text-lg leading-relaxed"
+            >
+              <p>
+                The objective of ECOBOARD is to "provide a better everyday life
+                for many people." "To offer a wide selection of well-designed,
+                effective uPVC Sheets & Boards products at prices so low that as
+                many people as possible can afford them," is our company
+                concept.
+              </p>
+
+              <p>
+                We strive to provide our clients with high-quality uPVC Sheets &
+                Boards at reasonable rates by optimising our whole value chain,
+                establishing long-term supplier partnerships, investing in
+                highly automated production, and producing enormous volumes. Our
+                vision is broader than just home decor. We want to make every
+                day a little bit better for everyone who is affected by our
+                company.
+              </p>
+            </div>
+
+            <!-- Key Features -->
+            <div
+              class="mt-6 lg:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4"
+            >
+              <div class="flex items-center space-x-3">
+                <div
+                  class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-leaf text-white text-sm"></i>
+                </div>
+                <span class="text-sm font-medium text-gray-700"
+                  >Eco-Friendly Materials</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div
+                  class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-shield-alt text-white text-sm"></i>
+                </div>
+                <span class="text-sm font-medium text-gray-700"
+                  >Durable & Long-lasting</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div
+                  class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-paint-brush text-white text-sm"></i>
+                </div>
+                <span class="text-sm font-medium text-gray-700"
+                  >Customizable Designs</span
+                >
+              </div>
+              <div class="flex items-center space-x-3">
+                <div
+                  class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-dollar-sign text-white text-sm"></i>
+                </div>
+                <span class="text-sm font-medium text-gray-700"
+                  >Cost-Effective Solutions</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact us -->
+   <section class="py-12 sm:py-16 lg:py-20 bg-light-gray-50">
+  <div class="max-w-full mx-auto px-6 py-10 bg-white shadow-2xl rounded-2xl">
+    <!-- Section Header -->
+    <div class="text-center mb-12 lg:mb-16">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-6">
+        Get in <span class="text-brown-dark">Touch</span> with Us
+      </h2>
+      <p class="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+        Ready to transform your space with our premium uPVC sheets and
+        boards? Contact us today for expert consultation and custom
+        solutions.
+      </p>
+    </div>
+    <div class="flex justify-center my-5">
+      <button
+        id="open-contact-card"
+        class="bg-brown-dark text-white px-8 py-4 rounded-xl shadow-lg font-bold text-lg hover:bg-brown-700 transition"
+      >
+        Contact Us
+      </button>
+    </div>
+  </div>
+</section>
+
+ <!-- footer -->
+     <footer
+      class="bg-gradient-to-b from-white to-gray-100 text-gray-800 py-14 px-6"
+    >
+      <div class="max-w-7xl mx-auto">
+        <!-- Mobile: Single column, Desktop: 5 columns -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10"
+        >
+          <!-- Logo + Name -->
+          <div class="flex flex-col items-center md:items-start">
+            <div
+              class="w-16 h-16 bg-gray-300 rounded-full overflow-hidden mb-4 flex items-center justify-center"
+            >
+              <span class="text-2xl font-bold text-gray-600">BW</span>
+            </div>
+            <span class="text-xl font-semibold tracking-wide">BeyondWud</span>
+          </div>
+
+          <!-- Resources -->
+          <div class="text-center md:text-left">
+            <h3 class="font-bold text-lg mb-4 text-brown-dark">RESOURCES</h3>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-600 transition-colors duration-200"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-600 transition-colors duration-200"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-green-600 transition-colors duration-200"
+                  >Products</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div class="text-center md:text-left">
+            <h3 class="font-bold text-lg mb-4 text-brown-dark">COMPANY</h3>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brown-dark transition-colors duration-200"
+                  >Career</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brown-dark transition-colors duration-200"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brown-dark transition-colors duration-200"
+                  >Service</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div class="text-center md:text-left">
+            <h3 class="font-bold text-lg mb-4 text-brown-dark">LEGAL</h3>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brown-dark transition-colors duration-200"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="hover:text-brown-dark transition-colors duration-200"
+                  >Terms of Use</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Address + Social -->
+          <div class="text-center md:text-left">
+            <h3 class="font-bold text-lg mb-4 text-brown-dark">ADDRESS</h3>
+            <div class="mb-4">
+              <p class="text-sm leading-6 text-gray-600">
+                123, Elegant Street<br />
+                New Industrial Area, Delhi<br />
+                PIN: 110001
+              </p>
+            </div>
+            <div class="flex justify-center md:justify-start space-x-4 text-lg">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-sky-400 transition-colors duration-200"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-pink-500 transition-colors duration-200"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-blue-800 transition-colors duration-200"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="mt-12 pt-8 border-t border-gray-200 text-center">
+          <p class="text-sm text-gray-500">
+            © 2025 BeyondWud. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.classList.toggle("hidden");
+        });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+
+        if (
+          !mobileMenu.contains(event.target) &&
+          !mobileMenuBtn.contains(event.target)
+        ) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
